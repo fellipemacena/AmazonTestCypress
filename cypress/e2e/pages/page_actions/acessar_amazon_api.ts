@@ -21,7 +21,7 @@ export class OpenAmazonAPI {
       method: 'POST',
       url: 'https://www.amazon.com.br/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https://www.amazon.com.br/?ref_=nav_signin&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.assoc_handle=brflex&openid.mode=checkid_setup&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.ns=http://specs.openid.net/auth/2.0&',
       body: {
-        email: 'testfafm@gmail.com',
+        email: '******', //inclua um e-mail válido, será necessário cadastro prévio no site da amazon
     }
   }).its('status').should('be.equal', 200) 
 }
@@ -30,7 +30,7 @@ cy.request({
   method: 'POST',
   url: 'https://www.amazon.com.br/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https://www.amazon.com.br/?ref_=nav_signin&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.assoc_handle=brflex&openid.mode=checkid_setup&openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.ns=http://specs.openid.net/auth/2.0&',
   body: {
-    password: 'qazxsw12',
+    password: '*****', //inclua senha do e-mail válido
     }
   }).its('status').should('be.equal', 200)
 }    
